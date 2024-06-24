@@ -20,10 +20,12 @@ body {
     display: grid;
     grid-template-columns: repeat(15, 40px);
     grid-template-rows: repeat(15, 40px);
-    gap: 2px;
+    gap: 0;
     margin: 20px auto;
     border: 2px solid #000;
     position: relative;
+    width: 600px;
+    height: 600px;
 }
 
 .cell {
@@ -33,11 +35,20 @@ body {
     border: 1px solid #000;
 }
 
+.start-red, .start-green, .start-yellow, .start-blue {
+    background-color: #fff;
+}
+
 .player-piece {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
 }
 
 .red-piece {
@@ -50,6 +61,7 @@ body {
 
 .yellow-piece {
     background-color: yellow;
+    color: black;
 }
 
 .blue-piece {
@@ -69,4 +81,9 @@ body {
 #dice-result {
     margin-top: 10px;
     font-size: 18px;
+}
+
+#current-player {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
